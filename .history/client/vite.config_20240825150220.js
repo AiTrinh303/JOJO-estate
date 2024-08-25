@@ -16,4 +16,9 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 500, // Adjust the limit as needed
   },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:5555',
+    },
+  },
 })
