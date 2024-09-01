@@ -94,7 +94,7 @@ export const addPost = async (req, res) => {
   }
 };
 
-//UPDATE A POST BY ID
+//UPDATE A POST
 export const updatePost = async (req, res) => {
   try {
     res.status(200).json();

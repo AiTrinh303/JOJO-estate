@@ -94,7 +94,6 @@ export const addPost = async (req, res) => {
   }
 };
 
-//UPDATE A POST BY ID
 export const updatePost = async (req, res) => {
   try {
     res.status(200).json();
@@ -104,8 +103,6 @@ export const updatePost = async (req, res) => {
   }
 };
 
-
-//DELETE A POST BY ID
 export const deletePost = async (req, res) => {
   const id = req.params.id;
   const tokenUserId = req.userId;

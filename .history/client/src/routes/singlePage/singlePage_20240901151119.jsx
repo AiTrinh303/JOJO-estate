@@ -21,8 +21,7 @@ function SinglePage() {
     setSaved((prev) => !prev);
     try {
       await apiRequest.post("/users/save", { postId: post.id });
-    } 
-    catch (err) {
+    } catch (err) {
       console.log(err);
       setSaved((prev) => !prev);
     }
@@ -65,11 +64,9 @@ function SinglePage() {
               <img src="/utility.png" alt="" />
               <div className="featureText">
                 <span>Utilities</span>
-                {post.postDetail.utilities === "owner" 
-                ? (
+                {post.postDetail.utilities === "owner" ? (
                   <p>Owner is responsible</p>
-                ) 
-                : (
+                ) : (
                   <p>Tenant is responsible</p>
                 )}
               </div>
@@ -78,11 +75,9 @@ function SinglePage() {
               <img src="/pet.png" alt="" />
               <div className="featureText">
                 <span>Pet Policy</span>
-                {post.postDetail.pet === "allowed" 
-                ? (
+                {post.postDetail.pet === "allowed" ? (
                   <p>Pets Allowed</p>
-                ) 
-                : (
+                ) : (
                   <p>Pets not Allowed</p>
                 )}
               </div>

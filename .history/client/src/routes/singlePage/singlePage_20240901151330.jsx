@@ -21,8 +21,7 @@ function SinglePage() {
     setSaved((prev) => !prev);
     try {
       await apiRequest.post("/users/save", { postId: post.id });
-    } 
-    catch (err) {
+    } catch (err) {
       console.log(err);
       setSaved((prev) => !prev);
     }
@@ -81,8 +80,7 @@ function SinglePage() {
                 {post.postDetail.pet === "allowed" 
                 ? (
                   <p>Pets Allowed</p>
-                ) 
-                : (
+                ) : (
                   <p>Pets not Allowed</p>
                 )}
               </div>

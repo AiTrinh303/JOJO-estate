@@ -1,8 +1,6 @@
 import prisma from "../lib/prisma.js";
 import jwt from "jsonwebtoken";
 
-
-//GET ALL POSTS
 export const getPosts = async (req, res) => {
   const query = req.query;
 
@@ -29,8 +27,6 @@ export const getPosts = async (req, res) => {
   }
 };
 
-
-//GET A POST BY ID
 export const getPost = async (req, res) => {
   const id = req.params.id;
   try {
@@ -71,8 +67,6 @@ export const getPost = async (req, res) => {
   }
 };
 
-
-//ADD A POST
 export const addPost = async (req, res) => {
   const body = req.body;
   const tokenUserId = req.userId;
@@ -94,7 +88,6 @@ export const addPost = async (req, res) => {
   }
 };
 
-//UPDATE A POST BY ID
 export const updatePost = async (req, res) => {
   try {
     res.status(200).json();
@@ -104,8 +97,6 @@ export const updatePost = async (req, res) => {
   }
 };
 
-
-//DELETE A POST BY ID
 export const deletePost = async (req, res) => {
   const id = req.params.id;
   const tokenUserId = req.userId;
