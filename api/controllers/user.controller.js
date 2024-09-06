@@ -1,7 +1,6 @@
 import prisma from "../lib/prisma.js";
 import bcrypt from "bcrypt";
 
-//GET ALL USERS
 export const getUsers = async (req, res) => {
   try {
     const users = await prisma.user.findMany();
@@ -12,7 +11,6 @@ export const getUsers = async (req, res) => {
   }
 };
 
-//GET USER BY ID
 export const getUser = async (req, res) => {
   const id = req.params.id;
   try {
@@ -26,7 +24,6 @@ export const getUser = async (req, res) => {
   }
 };
 
-//UPDATE USER BY ID
 export const updateUser = async (req, res) => {
   const id = req.params.id;
   const tokenUserId = req.userId;
@@ -60,7 +57,6 @@ export const updateUser = async (req, res) => {
   }
 };
 
-//DELETE USER BY ID
 export const deleteUser = async (req, res) => {
   const id = req.params.id;
   const tokenUserId = req.userId;
@@ -80,7 +76,6 @@ export const deleteUser = async (req, res) => {
   }
 };
 
-//SAVE POST
 export const savePost = async (req, res) => {
   const postId = req.body.postId;
   const tokenUserId = req.userId;
@@ -117,7 +112,6 @@ export const savePost = async (req, res) => {
   }
 };
 
-//GET PROFILE POSTS
 export const profilePosts = async (req, res) => {
   const tokenUserId = req.userId;
   try {
@@ -139,7 +133,6 @@ export const profilePosts = async (req, res) => {
   }
 };
 
-//
 export const getNotificationNumber = async (req, res) => {
   const tokenUserId = req.userId;
   try {
