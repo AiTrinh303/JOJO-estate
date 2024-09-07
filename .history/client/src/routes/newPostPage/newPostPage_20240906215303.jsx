@@ -18,7 +18,7 @@ function NewPostPage() {
     const formData = new FormData(e.target);
     const inputs = Object.fromEntries(formData);
 
-    // console.log(inputs);
+    conso
 
     try {
       const res = await apiRequest.post("/posts", {

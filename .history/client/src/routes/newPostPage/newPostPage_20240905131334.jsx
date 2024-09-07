@@ -18,8 +18,6 @@ function NewPostPage() {
     const formData = new FormData(e.target);
     const inputs = Object.fromEntries(formData);
 
-    // console.log(inputs);
-
     try {
       const res = await apiRequest.post("/posts", {
         postData: {
@@ -58,7 +56,7 @@ function NewPostPage() {
       <div className="formContainer">
         <h1>Add New Post</h1>
         <div className="wrapper">
-          <form onSubmit={handleSubmit}>
+          < onSubmit={handleSubmit}>
             <div className="item">
               <label htmlFor="title">Title</label>
               <input id="title" name="title" type="text" />
@@ -156,7 +154,7 @@ function NewPostPage() {
             </div>
             <button className="sendButton">Add</button>
             {error && <span>error</span>}
-          </form>
+          </ >
         </div>
       </div>
       <div className="sideContainer">
