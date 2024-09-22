@@ -31,8 +31,8 @@ function NewPostPage() {
           bathroom: parseInt(inputs.bathroom),
           type: inputs.type,
           property: inputs.property,
-          latitude: parseFloat(inputs.latitude),
-          longitude: parseFloat(inputs.longitude),
+          latitude: inputs.latitude,
+          longitude: inputs.longitude,
           images: images,
         },
         postDetail: {

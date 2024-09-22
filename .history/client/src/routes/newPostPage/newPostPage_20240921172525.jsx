@@ -31,8 +31,8 @@ function NewPostPage() {
           bathroom: parseInt(inputs.bathroom),
           type: inputs.type,
           property: inputs.property,
-          latitude: parseFloat(inputs.latitude),
-          longitude: parseFloat(inputs.longitude),
+          latitude: inputs.latitude,
+          longitude: inputs.longitude,
           images: images,
         },
         postDetail: {
@@ -49,7 +49,7 @@ function NewPostPage() {
       navigate("/" + res.data.id)
     } catch (err) {
       console.log(err);
-      setError(err.message || "Something went wrong.");
+      setError(error);
     }
   };
 

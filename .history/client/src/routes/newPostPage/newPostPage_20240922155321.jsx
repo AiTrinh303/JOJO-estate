@@ -32,7 +32,7 @@ function NewPostPage() {
           type: inputs.type,
           property: inputs.property,
           latitude: parseFloat(inputs.latitude),
-          longitude: parseFloat(inputs.longitude),
+          longitude: inputs.longitude,
           images: images,
         },
         postDetail: {
