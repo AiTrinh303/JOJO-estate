@@ -49,7 +49,7 @@ function NewPostPage() {
       navigate("/" + res.data.id)
     } catch (err) {
       console.log(err);
-      setError("Something went wrong.");
+      setError(err.message || "Something went wrong.");
     }
   };
 
@@ -65,7 +65,7 @@ function NewPostPage() {
             </div>
             <div className="item">
               <label htmlFor="price">Price</label>
-              <input min = {0} id="price" name="price" type="number" />
+              <input id="price" name="price" type="number" />
             </div>
             <div className="item">
               <label htmlFor="address">Address</label>
@@ -155,13 +155,13 @@ function NewPostPage() {
               <input min={0} id="restaurant" name="restaurant" type="number" />
             </div>
             <button className="sendButton">Add</button>
-            {error && <span>{error}</span>}
+            {error && <span>Can not add post</span>}
           </form>
         </div>
       </div>
       <div className="sideContainer">
         {images.map((image, index) => (
-          <img src={image} key={index} alt="images" />
+          <img src={image} key={index} alt="" />
         ))}
         <UploadWidget
           uwConfig={{

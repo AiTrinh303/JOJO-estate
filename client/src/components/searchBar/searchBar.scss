@@ -31,7 +31,6 @@
 
   form {
     margin-top: 1px;
-    border: 1px solid #999;
     display: flex;
     justify-content: space-between;
     height: 64px;
@@ -43,21 +42,27 @@
     };
 
     input {
-      border: none;
+      border: 0.5px solid #999;
       padding: 0px 10px;
       width: 200px;
 
       @include lg {
         padding: 0px 5px;
 
-        &:nth-child(2),
+        &:nth-child(2) {
+          width: 140px;
+        }
+
         &:nth-child(3) {
           width: 140px;
         }
       };
       @include md {
         width: 200px;
-        &:nth-child(2),
+        &:nth-child(2){
+          width: 200px;
+        }
+
         &:nth-child(3) {
           width: 200px;
         }
@@ -65,12 +70,16 @@
 
       @include sm{
         width: auto;
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: auto;
-        }
         padding: 20px;
         border: 1px solid #999;
+        
+        &:nth-child(2){
+          width: auto;          
+        }
+        &:nth-child(3) {
+          width: auto;          
+        }
+        
       }
     };
 

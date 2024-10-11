@@ -49,7 +49,7 @@ function NewPostPage() {
       navigate("/" + res.data.id)
     } catch (err) {
       console.log(err);
-      setError("Something went wrong.");
+      setError(err.message || "Something went wrong.");
     }
   };
 
@@ -65,7 +65,7 @@ function NewPostPage() {
             </div>
             <div className="item">
               <label htmlFor="price">Price</label>
-              <input min = {0} id="price" name="price" type="number" />
+              <input id="price" name="price" type="number" />
             </div>
             <div className="item">
               <label htmlFor="address">Address</label>

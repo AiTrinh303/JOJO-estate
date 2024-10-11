@@ -97,9 +97,9 @@ export const addPost = async (req, res) => {
   // const latitude = postData.latitude ? postData.latitude.toString() : null;
   // const longitude = postData.longitude ? postData.longitude.toString() : null;
 
-  // console.log("postData:", postData);
-  // console.log("postDetail:", postDetail);
-  // console.log("tokenUserId:", tokenUserId);
+  console.log("postData:", postData);
+  console.log("postDetail:", postDetail);
+  console.log("tokenUserId:", tokenUserId);
 
 
   try {
@@ -112,7 +112,7 @@ export const addPost = async (req, res) => {
         },
       },
     });
-    res.status(200).json(newPost);
+    res.status(201).json(newPost);
   } catch (err) {
     console.error("Error creating post:", err.message);
     res.status(500).json({ message: "Failed to create post" });

@@ -52,26 +52,22 @@ export const getPost = async (req, res) => {
 
     const token = req.cookies?.token;
 
-    if (!token) {
-      // No token present
-      return res.status(200).json({ ...post, isSaved: false });
-    }
-    try {
-      const payload = jwt.verify(token, process.env.JWT_SECRET_KEY);
-      const saved = await prisma.savedPost.findUnique({
-        where: {
-          userId_postId: {
-            postId: id,
-            userId: payload.id,
-          },
-        },
+    if (token) {
+      jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, payload) => {
+        if (!err) {
+          const saved = await prisma.savedPost.findUnique({
+            where: {
+              userId_postId: {
+                postId: id,
+                userId: payload.id,
+              },
+            },
+          });
+          res.status(200).json({ ...post, isSaved: saved ? true : false });
+        }
       });
-
-      return res.status(200).json({ ...post, isSaved: saved ? true : false });
-    } catch (err) {
-      // Token verification failed
-      return res.status(200).json({ ...post, isSaved: false });
     }
+    res.status(200).json({ ...post, isSaved: false });
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Failed to get post" });
@@ -97,9 +93,9 @@ export const addPost = async (req, res) => {
   // const latitude = postData.latitude ? postData.latitude.toString() : null;
   // const longitude = postData.longitude ? postData.longitude.toString() : null;
 
-  // console.log("postData:", postData);
-  // console.log("postDetail:", postDetail);
-  // console.log("tokenUserId:", tokenUserId);
+  console.log("postData:", postData);
+  console.log("postDetail:", postDetail);
+  console.log("tokenUserId:", tokenUserId);
 
 
   try {
@@ -112,7 +108,7 @@ export const addPost = async (req, res) => {
         },
       },
     });
-    res.status(200).json(newPost);
+    res.status(201).json(newPost);
   } catch (err) {
     console.error("Error creating post:", err.message);
     res.status(500).json({ message: "Failed to create post" });
