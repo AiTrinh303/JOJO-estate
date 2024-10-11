@@ -26,6 +26,7 @@ function Register() {
         password,
       });
    
+      // form.reset(); 
       navigate("/login");
     } 
     catch (err) {

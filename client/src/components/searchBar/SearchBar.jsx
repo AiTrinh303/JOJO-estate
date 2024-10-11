@@ -57,10 +57,11 @@ function SearchBar() {
           onChange={handleChange}
         />
         <Link
+          className ='link'
           to={`/list?type=${query.type}&city=${query.city}&minPrice=${query.minPrice}&maxPrice=${query.maxPrice}`}
         >
           <button>
-            <img src="/search.png" alt="" />
+            <img src="/search.png" alt="search" />
           </button>
         </Link>
       </form>

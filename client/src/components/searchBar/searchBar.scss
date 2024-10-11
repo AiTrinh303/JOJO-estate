@@ -9,21 +9,22 @@
       background-color: white;
       text-transform: capitalize;
       margin-bottom: 1px;
-      width: 101px;
+      width: 100px;
       cursor: pointer;
       
       &.active {
-        background-color: black;
-        color: white;
+        background-color: #FECE51;
+        color: black;
+        border: 1px solid #999;
         
       };
 
       &:first-child {
-        border-top-left-radius: 8px;
-        border-right: none;
+        border-top-left-radius: 5px;
+        // border-right: none;
       };
       &:last-child {
-        border-top-right-radius: 8px;
+        border-top-right-radius: 5px;
         border-left: none;
       };
     }
@@ -34,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     height: 64px;
-    gap: 5px;
+    // gap: 2.2px;
 
     @include sm {
       flex-direction: column;
@@ -43,6 +44,7 @@
 
     input {
       border: 0.5px solid #999;
+      border-right: none;
       padding: 0px 10px;
       width: 200px;
 
@@ -83,14 +85,16 @@
       }
     };
 
-    a{
+    .link{
       flex: 1;
       background-color: #fece51;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      button {
+      border-top-right-radius: 5px;
+      border: 0.5px solid #999;
+      
+      button {        
         border: none;
         cursor: pointer;
         background-color: #fece51;

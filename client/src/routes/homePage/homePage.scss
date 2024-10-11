@@ -57,6 +57,10 @@
 
         h1 {
           font-size: 36px;
+          color: black;
+          .span{
+            color: #FECE51;
+          }
           
           @include lg {
             font-size: 32px;
