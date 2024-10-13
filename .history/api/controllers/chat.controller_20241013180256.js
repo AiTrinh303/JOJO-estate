@@ -74,7 +74,6 @@ export const getChat = async (req, res) => {
   }
 };
 
-// ADD CHAT
 export const addChat = async (req, res) => {
   const tokenUserId = req.userId;
   try {
@@ -90,7 +89,6 @@ export const addChat = async (req, res) => {
   }
 };
 
-// READ CHAT
 export const readChat = async (req, res) => {
   const tokenUserId = req.userId;
   

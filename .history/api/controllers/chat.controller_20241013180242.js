@@ -1,6 +1,6 @@
 import prisma from "../lib/prisma.js";
 
-// GET ALL CHATS
+// 
 export const getChats = async (req, res) => {
   const tokenUserId = req.userId;
 
@@ -36,7 +36,6 @@ export const getChats = async (req, res) => {
   }
 };
 
-// GET CHAT BY ID
 export const getChat = async (req, res) => {
   const tokenUserId = req.userId;
 
@@ -74,7 +73,6 @@ export const getChat = async (req, res) => {
   }
 };
 
-// ADD CHAT
 export const addChat = async (req, res) => {
   const tokenUserId = req.userId;
   try {
@@ -90,7 +88,6 @@ export const addChat = async (req, res) => {
   }
 };
 
-// READ CHAT
 export const readChat = async (req, res) => {
   const tokenUserId = req.userId;
   

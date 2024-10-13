@@ -90,7 +90,6 @@ export const addChat = async (req, res) => {
   }
 };
 
-// READ CHAT
 export const readChat = async (req, res) => {
   const tokenUserId = req.userId;
   
