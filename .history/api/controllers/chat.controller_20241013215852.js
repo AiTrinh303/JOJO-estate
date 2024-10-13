@@ -5,7 +5,7 @@ export const getChats = async (req, res) => {
   const tokenUserId = req.userId;
 
   try {
-    //get all chats
+    //find 
     const chats = await prisma.chat.findMany({
       where: {
         userIDs: {
@@ -14,7 +14,6 @@ export const getChats = async (req, res) => {
       },
     });
 
-    //get info of the user
     for (const chat of chats) {
       const receiverId = chat.userIDs.find((id) => id !== tokenUserId);
 

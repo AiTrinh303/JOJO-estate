@@ -1,43 +1,27 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./chat.scss";
-import { AuthContext } from "../../context/AuthContext";
-import apiRequest from "../../lib/apiRequest";
 
 function Chat({chats}) {
-  const [chat, setChat] = useState(null);
-  const { currentUser } = useContext(AuthContext);
-
-  const handleOpenChat = async (id, receiver) => {
-    try {
-      const res = await apiRequest("/chats/" + id);
-      // if (!res.data.seenBy.includes(currentUser.id)) {
-      //   decrease();
-      // }
-      setChat({ ...res.data, receiver });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
+  
   return (
     <div className="chat">
       <div className="messages">
         <h1>Messages</h1>
-        {chats?.map((chat) => (
+        {chats?.map((c) => (
           <div
             className="message"
-            key={chat.id}
+            key={c.id}
             style={{
               backgroundColor:
-                chat.seenBy.includes(currentUser.id) || chat?.id === chat.id
+                c.seenBy.includes(currentUser.id) || chat?.id === c.id
                   ? "white"
                   : "#fecd514e",
             }}
-            onClick={() => handleOpenChat(chat.id, chat.receiver)}
+            onClick={() => handleOpenChat(c.id, c.receiver)}
           >
-            <img src={chat.receiver.avatar || "/noavatar.jpg"} alt="avatar" />
-            <span>{chat.receiver.username}</span>
-            <p>{chat.lastMessage}</p>
+            <img src={c.receiver.avatar || "/noavatar.jpg"} alt="" />
+            <span>{c.receiver.username}</span>
+            <p>{c.lastMessage}</p>
           </div>
         ))}
       </div>  

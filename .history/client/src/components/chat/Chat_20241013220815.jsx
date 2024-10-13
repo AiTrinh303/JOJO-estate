@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import "./chat.scss";
 import { AuthContext } from "../../context/AuthContext";
-import apiRequest from "../../lib/apiRequest";
 
 function Chat({chats}) {
   const [chat, setChat] = useState(null);
@@ -9,10 +8,10 @@ function Chat({chats}) {
 
   const handleOpenChat = async (id, receiver) => {
     try {
-      const res = await apiRequest("/chats/" + id);
-      // if (!res.data.seenBy.includes(currentUser.id)) {
-      //   decrease();
-      // }
+      const res = await apiRequest  ("/chats/" + id);
+      if (!res.data.seenBy.includes(currentUser.id)) {
+        decrease();
+      }
       setChat({ ...res.data, receiver });
     } catch (err) {
       console.log(err);

@@ -14,7 +14,7 @@ export const getChats = async (req, res) => {
       },
     });
 
-    //get info of the user
+    //
     for (const chat of chats) {
       const receiverId = chat.userIDs.find((id) => id !== tokenUserId);
 

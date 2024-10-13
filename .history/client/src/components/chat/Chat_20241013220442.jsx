@@ -1,24 +1,8 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./chat.scss";
-import { AuthContext } from "../../context/AuthContext";
-import apiRequest from "../../lib/apiRequest";
 
 function Chat({chats}) {
-  const [chat, setChat] = useState(null);
-  const { currentUser } = useContext(AuthContext);
-
-  const handleOpenChat = async (id, receiver) => {
-    try {
-      const res = await apiRequest("/chats/" + id);
-      // if (!res.data.seenBy.includes(currentUser.id)) {
-      //   decrease();
-      // }
-      setChat({ ...res.data, receiver });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
+  
   return (
     <div className="chat">
       <div className="messages">
@@ -36,8 +20,8 @@ function Chat({chats}) {
             onClick={() => handleOpenChat(chat.id, chat.receiver)}
           >
             <img src={chat.receiver.avatar || "/noavatar.jpg"} alt="avatar" />
-            <span>{chat.receiver.username}</span>
-            <p>{chat.lastMessage}</p>
+            <span>{c.receiver.username}</span>
+            <p>{c.lastMessage}</p>
           </div>
         ))}
       </div>  
