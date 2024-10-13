@@ -17,49 +17,51 @@ function App() {
       element: <Layout />,
       children: [
         {
-          path:"/",
-          element:<HomePage/>
+          path: "/",
+          element: <HomePage />,
         },
         {
-          path:"/list",
-          element:<ListPage/>
+          path: "/list",
+          element: <ListPage />,
+          loader: listPageLoader,
         },
         {
-          path:"/:id",
-          element:<SinglePage/>
+          path: "/:id",
+          element: <SinglePage />,
+          loader: singlePageLoader,
         },
         {
-          path:"/profile",
-          element:<ProfilePage/>
+          path: "/login",
+          element: <Login />,
         },
         {
-          path:"/login",
-          element:<Login/>
+          path: "/register",
+          element: <Register />,
         },
         {
-          path:"/register",
-          element:<Register/>
+          path: "*",
+          
         }
       ],
-    // },
-    // {
-    //   path: "/",
-    //   element: <RequireAuth />,
-    //   children: [
-    //     {
-    //       path: "/profile",
-    //       element: <ProfilePage />,
-    //       loader: profilePageLoader
-    //     },
-    //     {
-    //       path: "/profile/update",
-    //       element: <ProfileUpdatePage />,
-    //     },
-    //     {
-    //       path: "/add",
-    //       element: <NewPostPage />,
-    //     },
-    //   ],
+    },
+    {
+      path: "/",
+      element: <RequireAuth />,
+      children: [
+        {
+          path: "/profile",
+          element: <ProfilePage />,
+          loader: profilePageLoader
+        },
+        {
+          path: "/profile/update",
+          element: <ProfileUpdatePage />,
+        },
+        {
+          path: "/add",
+          element: <NewPostPage />,
+        },
+      ],
     },
   ]);
 

@@ -8,8 +8,8 @@ import Login from "./routes/login/login";
 import Register from "./routes/register/register";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
-import NotFoundPage from "./routes/notFoundPage/notFoundPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
+import NotFoundPage from "./routes/notFoundPage/notFoundPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -38,6 +38,10 @@ function App() {
         {
           path: "/register",
           element: <Register />,
+        },
+        {
+          path: "*",
+          element: <NotFoundPage />,
         }
       ],
     },
@@ -60,10 +64,6 @@ function App() {
         },
       ],
     },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    }
   ]);
 
   return <RouterProvider router={router} />;

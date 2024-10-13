@@ -60,10 +60,7 @@ function App() {
         },
       ],
     },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    }
+    
   ]);
 
   return <RouterProvider router={router} />;

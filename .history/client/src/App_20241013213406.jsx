@@ -8,7 +8,6 @@ import Login from "./routes/login/login";
 import Register from "./routes/register/register";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import NewPostPage from "./routes/newPostPage/newPostPage";
-import NotFoundPage from "./routes/notFoundPage/notFoundPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 
 function App() {
@@ -38,6 +37,9 @@ function App() {
         {
           path: "/register",
           element: <Register />,
+        },
+        {
+          
         }
       ],
     },
@@ -60,10 +62,6 @@ function App() {
         },
       ],
     },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    }
   ]);
 
   return <RouterProvider router={router} />;

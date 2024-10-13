@@ -38,6 +38,10 @@ function App() {
         {
           path: "/register",
           element: <Register />,
+        },
+        {
+          path: "*",
+          element: <NotFoundPage />,
         }
       ],
     },
@@ -60,10 +64,6 @@ function App() {
         },
       ],
     },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    }
   ]);
 
   return <RouterProvider router={router} />;

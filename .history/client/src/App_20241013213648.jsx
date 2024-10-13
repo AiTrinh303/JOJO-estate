@@ -59,11 +59,10 @@ function App() {
           element: <NewPostPage />,
         },
       ],
-    },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    }
+    }    {
+          path: "*",
+          element: <NotFoundPage />,
+        }
   ]);
 
   return <RouterProvider router={router} />;
