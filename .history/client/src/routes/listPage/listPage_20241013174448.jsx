@@ -29,7 +29,7 @@ function ListPage() {
         </div>
       </div>
       <div className="mapContainer">
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<p>Loading...</p>}>
           <Await
             resolve={data.postResponse}
             errorElement={<p>Error loading posts!</p>}
