@@ -119,7 +119,7 @@ export const savePost = async (req, res) => {
   }
 };
 
-//GET ALL PROFILE POSTS - SAVED POSTS
+//GET ALL PROFILE POSTS - SAVED 
 export const profilePosts = async (req, res) => {
   const tokenUserId = req.userId;
   try {
