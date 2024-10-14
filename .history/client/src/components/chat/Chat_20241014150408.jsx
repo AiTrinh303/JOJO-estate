@@ -18,6 +18,7 @@ function Chat({chats}) {
     messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chat]);
 
+
   const decrease = useNotificationStore((state) => state.decrease);
 
   const handleOpenChat = async (id, receiver) => {
