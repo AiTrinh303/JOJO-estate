@@ -2,9 +2,9 @@ import "./chat.scss";
 import { useContext, useEffect, useRef, useState } from "react";
 import { format } from "timeago.js";
 import apiRequest from "../../lib/apiRequest";
-import { useNotificationStore } from "../../lib/notificationStore";
 import { AuthContext } from "../../context/AuthContext";
 import { SocketContext } from "../../context/SocketContext";
+import { useNotificationStore } from "../../lib/notificationStore";
 
 
 function Chat({chats}) {
@@ -25,9 +25,9 @@ function Chat({chats}) {
   const handleOpenChat = async (id, receiver) => {
     try {
       const res = await apiRequest("/chats/" + id);
-      if (!res.data.seenBy.includes(currentUser.id)) {
-        decrease();
-      }
+      // if (!res.data.seenBy.includes(currentUser.id)) {
+      //   decrease();
+      // }
       setChat({ ...res.data, receiver });
     } catch (err) {
       console.log(err);
