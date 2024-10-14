@@ -42,27 +42,27 @@ function Chat({chats}) {
     }
   };
 
-  // useEffect(() => {
-  //   const read = async () => {
-  //     try {
-  //       await apiRequest.put("/chats/read/" + chat.id);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
+  useEffect(() => {
+    const read = async () => {
+      try {
+        await apiRequest.put("/chats/read/" + chat.id);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-  //   if (chat && socket) {
-  //     socket.on("getMessage", (data) => {
-  //       if (chat.id === data.chatId) {
-  //         setChat((prev) => ({ ...prev, messages: [...prev.messages, data] }));
-  //         read();
-  //       }
-  //     });
-  //   }
-  //   return () => {
-  //     socket.off("getMessage");
-  //   };
-  // }, [socket, chat]);
+    if (chat && socket) {
+      socket.on("getMessage", (data) => {
+        if (chat.id === data.chatId) {
+          setChat((prev) => ({ ...prev, messages: [...prev.messages, data] }));
+          read();
+        }
+      });
+    }
+    return () => {
+      socket.off("getMessage");
+    };
+  }, [socket, chat]);
 
   return (
     <div className="chat">

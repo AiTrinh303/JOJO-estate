@@ -22,48 +22,6 @@ function Chat({chats}) {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.target);
-    const text = formData.get("text");
-
-    if (!text) return;
-    try {
-      const res = await apiRequest.post("/messages/" + chat.id, { text });
-      setChat((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
-      e.target.reset();
-      // socket.emit("sendMessage", {
-      //   receiverId: chat.receiver.id,
-      //   data: res.data,
-      // });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  // useEffect(() => {
-  //   const read = async () => {
-  //     try {
-  //       await apiRequest.put("/chats/read/" + chat.id);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-
-  //   if (chat && socket) {
-  //     socket.on("getMessage", (data) => {
-  //       if (chat.id === data.chatId) {
-  //         setChat((prev) => ({ ...prev, messages: [...prev.messages, data] }));
-  //         read();
-  //       }
-  //     });
-  //   }
-  //   return () => {
-  //     socket.off("getMessage");
-  //   };
-  // }, [socket, chat]);
-
   return (
     <div className="chat">
       <div className="messages">
@@ -108,8 +66,7 @@ function Chat({chats}) {
                       : "flex-start",
                   textAlign:
                     message.userId === currentUser.id 
-                      ? "right" 
-                      : "left",
+                      ? "right" : "left",
                 }}
                 key={message.id}
               >
