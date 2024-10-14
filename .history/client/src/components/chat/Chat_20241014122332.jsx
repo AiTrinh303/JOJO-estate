@@ -1,10 +1,8 @@
-import "./chat.scss";
 import { useContext, useRef, useState } from "react";
-import { format } from "timeago.js";
-import apiRequest from "../../lib/apiRequest";
+import "./chat.scss";
 import { AuthContext } from "../../context/AuthContext";
-import { SocketContext } from "../../context/SocketContext";
-
+import apiRequest from "../../lib/apiRequest";
+import { format } from "timeago.js";
 
 function Chat({chats}) {
   const [chat, setChat] = useState(null);
@@ -36,10 +34,10 @@ function Chat({chats}) {
       const res = await apiRequest.post("/messages/" + chat.id, { text });
       setChat((prev) => ({ ...prev, messages: [...prev.messages, res.data] }));
       e.target.reset();
-      socket.emit("sendMessage", {
-        receiverId: chat.receiver.id,
-        data: res.data,
-      });
+      // socket.emit("sendMessage", {
+      //   receiverId: chat.receiver.id,
+      //   data: res.data,
+      // });
     } catch (err) {
       console.log(err);
     }
