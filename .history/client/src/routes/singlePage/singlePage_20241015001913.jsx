@@ -7,7 +7,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
 
-function SinglePage() {
+function SinglePage({ postOwnerId }) {
   const post = useLoaderData();
   const navigate = useNavigate();
   
@@ -29,7 +29,10 @@ function SinglePage() {
   };
 
   const handleSendMessage = () => {
-      navigate(`/profile`, {state: { openChat: true },});
+    // Navigate to the user's profile page and pass the owner ID as state
+    navigate(`/profile`, {
+      state: { openChat: true },
+    });
   };
 
   return (

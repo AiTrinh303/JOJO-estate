@@ -29,7 +29,10 @@ function SinglePage() {
   };
 
   const handleSendMessage = () => {
-      navigate(`/profile`, {state: { openChat: true },});
+    // Navigate to the user's profile page and pass the owner ID as state
+    navigate(`/profile`, {
+      state: { openChat: true },
+    });
   };
 
   return (

@@ -29,7 +29,8 @@ function SinglePage() {
   };
 
   const handleSendMessage = () => {
-      navigate(`/profile`, {state: { openChat: true },});
+      navigate(`/profile`, {state: { openChat: true },
+    });
   };
 
   return (

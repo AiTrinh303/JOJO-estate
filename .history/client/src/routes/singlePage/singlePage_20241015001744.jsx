@@ -28,9 +28,7 @@ function SinglePage() {
     }
   };
 
-  const handleSendMessage = () => {
-      navigate(`/profile`, {state: { openChat: true },});
-  };
+  
 
   return (
     <div className="singlePage">
