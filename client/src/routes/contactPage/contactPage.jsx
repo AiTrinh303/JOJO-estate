@@ -2,8 +2,13 @@ import './contactPage.scss'
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import { HiChatBubbleBottomCenter } from 'react-icons/hi2'
+import { useState } from 'react';
+import ContactForm from '../../components/contactForm/contactForm';
 
 const ContactPage = () => {
+
+  const [openForm, setOpenForm] = useState(false)
+
   return (
     <div className="contactPage">
       <div className="textContainer">  
@@ -69,10 +74,13 @@ const ContactPage = () => {
                     <span className="secondaryText">099 333 666 999</span>
                   </div>
                 </div>
-                <div className="button">Message now</div>
+                <div className="button" onClick={()=> {setOpenForm(true)}}>Message now</div>
               </div>
             </div>
           </div>
+
+          {/* Conditionally render ContactForm based on openForm state */}
+          {openForm && <ContactForm closeForm={() => setOpenForm(false)} />}
       </div>  
 
       <div className="imgContainer">
