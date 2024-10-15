@@ -1,0 +1,34 @@
+@import "../../responsive.scss";
+
+.aboutPage{
+    display: flex;
+    height: 100%;
+    
+    .textContainer {
+      flex: 3;
+    }
+
+    .imgContainer {
+        flex: 2;
+        background-color: #fffbce;
+        position: relative;
+        display: flex;
+        align-items: center;
+       
+    
+        @include md {
+          display: none;
+        }
+    
+        img {
+          width: 115%;
+          position: absolute;
+          right: -35px;
+          opacity: 0;
+          animation: fade-in-slide-up 2s ease-in-out forwards; 
+    
+          @include lg {
+            width: 105%;
+          }
+        }
+    }

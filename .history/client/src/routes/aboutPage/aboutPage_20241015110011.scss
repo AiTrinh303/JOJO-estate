@@ -1,0 +1,9 @@
+@import "../../responsive.scss";
+
+.aboutPage{
+    display: flex;
+    height: 100%;
+    
+    .textContainer {
+      flex: 3;}
+}
