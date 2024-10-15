@@ -16,60 +16,60 @@ const ContactPage = () => {
 
         <div className="contactContainer">
             {/* first row */}
-            <div className="flexStart row">
-              <div className="flexColCenter mode">
+            <div className="row">
+              <div className="mode">
                 <div className="flexStart">
-                  <div className="flexCenter icon">
+                  <div className="icon">
                     <MdCall size={25} />
                   </div>
-                  <div className="flexColStart detail">
+                  <div className="detail">
                     <span className="primaryText">Call</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">099 333 666 999</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Call now</div>
+                <div className="button">Call now</div>
               </div>
 
-              <div className="flexColCenter mode">
+              <div className="mode">
                 <div className="flexStart">
-                  <div className="flexCenter icon">
+                  <div className="icon">
                     <BsFillChatDotsFill size={25} />
                   </div>
-                  <div className="flexColStart detail">
+                  <div className="detail">
                     <span className="primaryText">Chat</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">099 333 666 999</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Chat now</div>
+                <div className="button">Chat now</div>
               </div>
             </div>
 
             {/* second row */}
-            <div className="flexStart row">
-              <div className="flexColCenter mode">
+            <div className="row">
+              <div className="mode">
                 <div className="flexStart">
-                  <div className="flexCenter icon">
+                  <div className="icon">
                     <BsFillChatDotsFill size={25} />
                   </div>
-                  <div className="flexColStart detail">
+                  <div className="detail">
                     <span className="primaryText">Video Call</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">099 333 666 999</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Video Call now</div>
+                <div className="button">Video Call now</div>
               </div>
 
-              <div className="flexColCenter mode">
+              <div className="mode">
                 <div className="flexStart">
-                  <div className="flexCenter icon">
+                  <div className="icon">
                     <HiChatBubbleBottomCenter size={25} />
                   </div>
-                  <div className="flexColStart detail">
+                  <div className="detail">
                     <span className="primaryText">Message</span>
-                    <span className="secondaryText">021 123 145 14</span>
+                    <span className="secondaryText">099 333 666 999</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Message now</div>
+                <div className="button">Message now</div>
               </div>
             </div>
           </div>
