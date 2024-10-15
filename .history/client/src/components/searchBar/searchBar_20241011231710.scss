@@ -13,7 +13,7 @@
       cursor: pointer;
       
       &.active {
-        background-color: #FFA508;
+        background-color: #FECE51;
         color: black;
         border: 1px solid #999;
         
@@ -87,7 +87,7 @@
 
     .link{
       flex: 1;
-      background-color: #FFA508;
+      background-color: #fece51;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,7 +97,7 @@
       button {        
         border: none;
         cursor: pointer;
-        background-color: #FFA508;
+        background-color: #fece51;
         
         @include sm{
           padding: 10px;

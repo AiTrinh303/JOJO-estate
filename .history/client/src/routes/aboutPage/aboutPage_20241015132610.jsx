@@ -39,12 +39,12 @@ const AboutPage = () => {
             >
               <AccordionItemHeading>
                 <AccordionItemButton
-                  className="accordionButton"
+                  className="flexCenter accordionButton"
                   onClick={() => setExpandedItem(expandedItem === i ? null : i)}
                 >
                   <div className="icon">{item.icon}</div>
                   <span className="primaryText">{item.heading}</span>
-                  <div className="icon">
+                  <div className="flexCenter icon">
                     <MdOutlineArrowDropDown
                       size={20}
                       className={expandedItem === i ? 'rotated' : ''}

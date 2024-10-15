@@ -29,10 +29,9 @@
 
       .title {
         font-size: 64px;
-        color: #008080;
         .small-text {
           font-size: 0.5em;
-          color: #FFA508; 
+          color: #929292; 
           margin-right: 10px;
         }
         .animated-text {
@@ -58,9 +57,9 @@
 
         h1 {
           font-size: 36px;
-          color: black;
+          color: #008080;
           .span{
-            color: #FFA508;
+            color: #FECE51;
           }
           
           @include lg {

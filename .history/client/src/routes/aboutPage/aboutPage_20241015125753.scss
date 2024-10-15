@@ -10,8 +10,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding-left: 20px;
-      margin-right: 25px;
     
       h1{
         font-size: 64px;
@@ -20,61 +18,46 @@
 
       h3 {
         color : #FFA508;
-        font-size: 32px;
       }
-
-      span {
-        color: #1f3e72;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 1.5;
-        margin-top: 2rem;
-       }
 
       .accordion {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         border: none;
-        
       }
       .accordionItem {
-        background: #FFFBCE;
-        border: 0.8px solid rgba(109, 109, 109, 0.143);
+        background: white;
+        border: 0.8px solid rgba(128, 128, 128, 0.143);
         border-radius: 8px;
         overflow: hidden;
         margin-bottom: 20px;
-         .expanded {
+        .expanded {
           box-shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
           border-radius: 6px;
         }
         .accordionButton {
-          background: #fffef4;
+          background: white;
           padding: 1rem;
           width: 100%;
-          display: flex;
           justify-content: space-between;
-          align-items: center;
           cursor: pointer;
-          
-          span {
-            font-size: 20px;
-            color: #1f3e72;
+  
+          .primaryText{
+              font-size: 1.1rem;
           }
   
           .icon {
               padding: 10px;
               background: #eeeeff;
               border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              flex-wrap: wrap;              
               svg {
               fill: #314867;
               }
           }
-        }        
-      }     
+        }
         
+      }      
+      
+      
     }
 
     .imgContainer {

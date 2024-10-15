@@ -44,7 +44,7 @@ const AboutPage = () => {
                 >
                   <div className="icon">{item.icon}</div>
                   <span className="primaryText">{item.heading}</span>
-                  <div className="icon">
+                  <div className="flexCenter icon">
                     <MdOutlineArrowDropDown
                       size={20}
                       className={expandedItem === i ? 'rotated' : ''}
