@@ -13,7 +13,7 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import data from '../../lib/accordion';
 
 const AboutPage = () => {
-  const [expandedItem, setExpandedItem] = useState(null);
+  const [expandedItem, setExpandedItem] = useState('collapsed');
 
   return (
     <div className="aboutPage">

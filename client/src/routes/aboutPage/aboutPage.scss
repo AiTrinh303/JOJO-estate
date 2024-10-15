@@ -10,8 +10,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding-left: 20px;
-      margin-right: 25px;
     
       h1{
         font-size: 64px;
@@ -34,6 +32,7 @@
       .accordion {
         margin-top: 1.5rem;
         border: none;
+        margin-right: 20px;
         
       }
       .accordionItem {
