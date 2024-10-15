@@ -28,8 +28,13 @@ function SinglePage() {
     }
   };
 
+  const handleAddChat = async () => {
+    
+
+
+
   const handleSendMessage = () => {
-      navigate(`/profile`);
+      navigate(`/profile`, {state: { openChat: true },});
   };
 
   return (

@@ -28,8 +28,21 @@ function SinglePage() {
     }
   };
 
+  const handleAddChat = async () => {
+    async (id, receiver) => {
+      try {
+        const res = await apiRequest.post("/chats");
+        
+       
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+
+
   const handleSendMessage = () => {
-      navigate(`/profile`);
+      navigate(`/profile`,);
   };
 
   return (

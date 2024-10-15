@@ -28,8 +28,19 @@ function SinglePage() {
     }
   };
 
-  const handleSendMessage = () => {
-      navigate(`/profile`);
+  const handleSendMessage = async () => {
+    try {
+      // Send API request to create a new chat
+      const res = await apiRequest.post("/chats");
+
+      // Assuming the API returns the new chat data, you could store it or navigate directly
+      if (res.data) {
+        // Navigate to the receiver's profile page, passing the chat data if needed
+        navigate(`/profile`, { state: { chatId: res.data.id } });
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

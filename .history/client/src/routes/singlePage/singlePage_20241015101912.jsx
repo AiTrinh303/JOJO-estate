@@ -28,8 +28,23 @@ function SinglePage() {
     }
   };
 
+  const handleAddChat = async () => {
+    async (id, receiver) => {
+      try {
+        const res = await apiRequest.post("/chats/" + id);
+        if (!res.data.seenBy.includes(currentUser.id)) {
+          decrease();
+        }
+        setChat({ ...res.data, receiver });
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+
+
   const handleSendMessage = () => {
-      navigate(`/profile`);
+      navigate(`/profile`, {state: { openChat: true },});
   };
 
   return (
