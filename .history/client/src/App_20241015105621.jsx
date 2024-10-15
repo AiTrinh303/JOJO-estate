@@ -29,7 +29,7 @@ function App() {
         },
         {
           path: "/contact",
-          element: <ContactPage />,
+          element: <ContactPagePage />,
         },
         {
           path: "/list",

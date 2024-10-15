@@ -17,12 +17,12 @@ function Navbar() {
   return (
     <nav>
       <div className="left">
-        <Link to="/" className="logo">
+        < href="/" className="logo">
           <span>🏠 JOJO.Estate</span>
-        </Link>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        </>
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/">Contact</a>
         <a href="/">Agents</a>
       </div>
 
@@ -54,8 +54,8 @@ function Navbar() {
 
         <div className={open ? "menu active" : "menu"}>
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <a href="/">About</a>
+          <a href="/">Contact</a>
           <a href="/">Agents</a>
           <Link to="/login">Sign in</Link>
           <Link to="/register">Sign up</Link>

@@ -53,9 +53,9 @@ function Navbar() {
             </div>      
 
         <div className={open ? "menu active" : "menu"}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
           <a href="/">Agents</a>
           <Link to="/login">Sign in</Link>
           <Link to="/register">Sign up</Link>

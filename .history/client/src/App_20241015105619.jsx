@@ -11,7 +11,6 @@ import NewPostPage from "./routes/newPostPage/newPostPage";
 import NotFoundPage from "./routes/notFoundPage/notFoundPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AboutPage from "./routes/aboutPage/aboutPage";
-import ContactPage from "./routes/contactPage/contactPage";
 
 function App() {
   const router = createBrowserRouter([
