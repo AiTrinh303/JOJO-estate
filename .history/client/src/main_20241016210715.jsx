@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <SocketContextProvider>
         <AiProvider>
           <App />
-        </AiProvider>
+          </AiProvider>
       </SocketContextProvider>
     </AuthContextProvider>
   </React.StrictMode>

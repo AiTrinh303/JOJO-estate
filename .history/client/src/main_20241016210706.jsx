@@ -4,15 +4,12 @@ import App from "./App.jsx";
 import "./index.scss";
 import { AuthContextProvider } from "./context/AuthContext.jsx";
 import { SocketContextProvider } from "./context/SocketContext.jsx";
-import AiProvider from "./context/AiContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthContextProvider>
       <SocketContextProvider>
-        <AiProvider>
-          <App />
-        </AiProvider>
+        <Ai><App /></Ai>
       </SocketContextProvider>
     </AuthContextProvider>
   </React.StrictMode>

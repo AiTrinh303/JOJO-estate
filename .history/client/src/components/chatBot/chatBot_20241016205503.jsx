@@ -4,16 +4,9 @@ import './chatBot.scss'
 
 const Title = () => {
     return (
-
-      <div className='title-header'>
-        <div className='title-left'>
-          <div className='title-image'>
-            <img src="./robot.png" alt="AI" />
-          </div>
-          <p>AI Assistant</p>
+        <div className='title-container'>
+            Title
         </div>
-      </div>
-
     )
     }
 

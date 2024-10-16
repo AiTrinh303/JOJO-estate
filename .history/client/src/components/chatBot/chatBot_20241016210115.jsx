@@ -13,7 +13,7 @@ const Title = () => {
           <p>AI Assistant</p>
         </div>
       </div>
-
+    </div>
     )
     }
 

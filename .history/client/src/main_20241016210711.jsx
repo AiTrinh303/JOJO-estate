@@ -11,8 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthContextProvider>
       <SocketContextProvider>
         <AiProvider>
-          <App />
-        </AiProvider>
+          <App /></AiProvider>
       </SocketContextProvider>
     </AuthContextProvider>
   </React.StrictMode>

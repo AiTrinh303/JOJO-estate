@@ -8,7 +8,6 @@ import postRoute from "./routes/post.route.js";
 import checkRoute from "./routes/check.route.js";
 import chatRoute from "./routes/chat.route.js";
 import messageRoute from "./routes/message.route.js";
-import aiRoute from "./routes/ai.route.js";
 
 const PORT = process.env.PORT || 8000;
 
