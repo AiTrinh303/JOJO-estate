@@ -96,12 +96,16 @@
       width: 115%;
       position: absolute;
       right: -35px;
-      opacity: 0; 
+      opacity: 0;
       animation: fade-in-slide-up 2s ease-in-out forwards; 
       border-bottom-right-radius: 350px;
-      
+
       @include lg {
         width: 105%;
+      }
+
+      &:hover {
+        transform: rotate(360deg); /* Rotate 360 degrees */
       }
     }
   }
