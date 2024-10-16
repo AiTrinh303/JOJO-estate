@@ -1,0 +1,111 @@
+.container {
+    max-width: 600px;
+    height: 90vh;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: rgba(95, 149, 81, 0.9);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    
+    
+    .wrap {
+      text-align: center;
+      margin-bottom: 20px;
+
+      .closeButton {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: white; // Or a contrasting color
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+        display: block;
+
+        
+    
+        &:hover {
+            color: #FFA508; // Change color on hover
+        }
+    }
+  
+      h1 {
+        font-size: 3rem;
+        color: #5f3301;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #0f203d;
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+    
+        div {
+          font-size: 1.3rem;
+          font-weight: bold;
+          margin-bottom: 30px;
+          color: #FFA202;
+        }
+    
+        input,
+        textarea {
+          padding: 24px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1rem;
+          width: 100%;
+          box-sizing: border-box;
+    
+          &:focus {
+            border-color: linear-gradient(97.05deg, #FFA508 3.76%, #ffa202 100%);
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+          }
+        }
+    
+        textarea {
+          resize: none;
+        }
+    
+        input[type='submit'] {
+          background-color: #FFA202;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          font-size: 1rem;
+          padding: 14px;
+          transition: background-color 0.3s ease;
+    
+          &:hover {
+            background: white;
+            color: #FFA508;
+            border: 1px solid #FFA508;
+            font-weight: 900;
+            }
+        }
+      }
+    }
+
+  
+  }
+  

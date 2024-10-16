@@ -1,0 +1,73 @@
+@import "../../responsive.scss";
+
+.contactPage{
+    display: flex;
+    height: 100%;
+    
+    .textContainer {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      h1{
+        font-size: 64px;
+        color: #008080;
+      }
+
+      h3 {
+        color : #FFA508;
+        font-size: 32px;
+      }
+
+      span {
+        color: #1f3e72;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 2rem;
+       }
+
+      .contactContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 2rem;
+        gap: 1rem;
+
+        .row{
+            
+        }
+      }
+    }
+
+    .imgContainer {
+        flex: 2;
+        background-color: #fffbce;
+        position: relative;
+        display: flex;
+        align-items: center;        
+            
+        @include md {
+          display: none;
+        }
+    
+        img {
+          width: 100%;
+          position: absolute;
+          border-top-left-radius: 250px; 
+          border-top-right-radius: 250px; 
+          border: 8px solid rgb(232 232 232 / 93%); 
+          right: -5px;
+          opacity: 0;
+          animation: fade-in-slide-up 2s ease-in-out forwards; 
+    
+          @include lg {
+            width: 85%;
+          }
+        }
+    }
+
+}
