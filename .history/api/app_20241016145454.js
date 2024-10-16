@@ -10,7 +10,6 @@ import chatRoute from "./routes/chat.route.js";
 import messageRoute from "./routes/message.route.js";
 
 const PORT = process.env.PORT || 8000;
-
 const app = express();
 
 app.use(express.json());

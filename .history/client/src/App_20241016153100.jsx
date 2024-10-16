@@ -12,7 +12,6 @@ import NotFoundPage from "./routes/notFoundPage/notFoundPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AboutPage from "./routes/aboutPage/aboutPage";
 import ContactPage from "./routes/contactPage/contactPage";
-import ChatBot from "./components/chatBot/chatBot";
 
 function App() {
   const router = createBrowserRouter([
@@ -50,9 +49,10 @@ function App() {
           path: "/register",
           element: <Register />,
         },
+        ,
         {
-          path: "/chatbot",
-          element: <ChatBot />,
+          path: "/register",
+          element: <Register />,
         }
       ],
     },
