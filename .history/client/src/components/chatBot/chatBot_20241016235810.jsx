@@ -3,6 +3,8 @@ import './chatBot.scss'
 import { MdOutlineScheduleSend } from "react-icons/md";
 
 
+
+
 const Title = () => {
     return (
       <div className='title-header'>
