@@ -25,7 +25,7 @@
     p {
       font-size: 26px;
       font-weight: 600;
-      color: #046cf1;
+      color: #DE6013;
       letter-spacing: 1px;
     }
   }
@@ -79,7 +79,7 @@
     }
 
     p {
-      background-color: #046cf1;
+      background-color: #DE6013;
       color: white;
       padding: 10px 15px;
       border-radius: 10px;
@@ -95,7 +95,7 @@
       p {
         border-radius: 10px;
         border-top-right-radius: 0;
-        background-color: #046cf1;
+        background-color: #DE6013;
       }
     }
   }
@@ -107,7 +107,7 @@
     display: flex;
     gap: 6px;
     align-items: center;
-    background-color: #046cf1;
+    background-color: #DE6013;
     width: fit-content;
 
     .dot {
@@ -148,15 +148,14 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  padding: 13px 20px;
-  background-color: #ffffff;
+  padding: 15px 10px;
 
   input {
     flex: 1;
     outline: none;
     border: none;
     border-radius: 5px;
-    padding: 8px 16px;
+    padding: 15px 26px;
     background-color: #edf2f7;
     color: #000;
     transition: 200ms;
@@ -165,14 +164,14 @@
     font-weight: 500;
 
     &:focus {
-      border-color: #046cf1;
+      border-color: #DE6013;
     }
   }
 
   .input-btn {
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
-    background-color: #046cf1;
+    background-color:#DE6013;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,21 +180,22 @@
     transition: background-color 200ms;
 
     &:hover {
-      background-color: #0d4ad9;
+      background-color: #DE6013;
     }
 
     .input-icon {
+      width: 80px;
       border-radius: 10px;
       padding: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #046cf1;
+      background-color:#DE6013;
       color: #fff;
       transition: background-color 200ms;
 
       &:hover {
-        background-color: #0d4ad9;
+        background-color:#DE6013;
       }
 
       svg {
@@ -218,4 +218,17 @@
   }
 }
 
+
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 40vw;
+}
 

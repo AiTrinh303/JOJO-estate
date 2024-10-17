@@ -37,7 +37,7 @@ const AiProvider = ({ children }) => {
   
       try {
         setProcessing(true);
-        const res = await apiRequest.post(`/ai`);
+        const res = await apiRequest.post('/ai', { message: messageText }); 
         setProcessing(false);
   
         const data = await res.json();
