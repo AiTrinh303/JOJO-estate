@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { questions } from "../../lib/questions";
-
-import "./FAQPage.scss"; // Import the SCSS file
+import "./FAQPage.scss";
 import SingleQuestion from "../../components/singleQuestion/singleQuestion";
 
 export default function FAQPage() {
@@ -21,7 +20,7 @@ export default function FAQPage() {
         </section>
       </div>
       <div className="imgContainer">
-        <img src="/about.png" alt="About" />
+        <img src="/FAQ.avif" alt="FAQ" />
       </div>
    </div>
   );

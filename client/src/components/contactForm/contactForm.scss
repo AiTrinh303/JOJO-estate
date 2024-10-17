@@ -1,8 +1,8 @@
 .container {
-    max-width: 600px;
-    height: 90vh;
+    max-width: 550px;
+    height: 85vh;
     margin: 50px auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    background: rgba(95, 149, 81, 0.9);
+    background: #1F447A;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
         background: none;
         border: none;
         font-size: 1.5rem;
-        color: white; // Or a contrasting color
+        color: #FFA508; // Or a contrasting color
         position: absolute;
         top: 10px;
         right: 10px;
@@ -38,20 +38,21 @@
         
     
         &:hover {
-            color: #FFA508; // Change color on hover
+            color: white; // Change color on hover
         }
     }
   
       h1 {
         font-size: 3rem;
-        color: #5f3301;
+        color: #FFA202;
         font-weight: 700;
         margin-bottom: 30px;
+        animation: slide-down 2s ease-in-out;
       }
   
       p {
         font-size: 1rem;
-        color: #0f203d;
+        color: #94a9cd;
         margin-bottom: 20px;
       }
       form {
