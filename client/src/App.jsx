@@ -14,6 +14,7 @@ import AboutPage from "./routes/aboutPage/aboutPage";
 import ContactPage from "./routes/contactPage/contactPage";
 import ChatBot from "./components/chatBot/chatBot";
 import SupportPage from "./routes/supportPage/supportPage";
+import FAQPage from "./routes/FAQPage/FAQPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -54,7 +55,11 @@ function App() {
         {
           path: "/support",
           element: <SupportPage />,
-        }
+        },
+        {
+          path: "/FAQ",
+          element: <FAQPage />,
+        },
       ],
     },
     {

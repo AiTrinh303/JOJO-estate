@@ -1,0 +1,29 @@
+.faq-container {
+    padding: 5rem 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .faq-wrapper {
+    max-width: 768px; // Same as 'max-w-xl'
+    width: 100%;
+    padding: 0 1rem;
+  
+    .faq-title {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+  
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem; // Adjust spacing between the questions
+    }
+  }
+  
