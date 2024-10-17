@@ -13,6 +13,7 @@ import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loade
 import AboutPage from "./routes/aboutPage/aboutPage";
 import ContactPage from "./routes/contactPage/contactPage";
 import ChatBot from "./components/chatBot/chatBot";
+import SupportPage from "./routes/supportPage/supportPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -51,8 +52,8 @@ function App() {
           element: <Register />,
         },
         {
-          path: "/chatbot",
-          element: <ChatBot />,
+          path: "/support",
+          element: <SupportPage />,
         }
       ],
     },

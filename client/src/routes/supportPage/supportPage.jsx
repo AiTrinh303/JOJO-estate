@@ -1,11 +1,12 @@
+import ChatBot from '../../components/chatBot/chatBot'
 import './supportPage.scss'
 
-const supportPage = () => {
+const SupportPage = () => {
   return (
-    <div>
-      SUPPORT PAGE
+    <div className='container'>
+        <ChatBot />
     </div>
   )
 }
 
-export default supportPage
+export default SupportPage

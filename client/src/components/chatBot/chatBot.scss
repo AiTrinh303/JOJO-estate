@@ -3,7 +3,7 @@
   gap: 20px;
   align-items: center;
   padding: 15px;
-  background-color: #ffffff;
+  // background-color: rgba(95, 149, 81, 0.9);
 
   .title-left {
     display: flex;
@@ -25,7 +25,7 @@
     p {
       font-size: 26px;
       font-weight: 600;
-      color: #DE6013;
+      color: #ac4a0d;
       letter-spacing: 1px;
     }
   }
@@ -229,6 +229,5 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 40vw;
 }
 
