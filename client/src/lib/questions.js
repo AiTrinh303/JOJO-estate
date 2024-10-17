@@ -34,15 +34,15 @@ export const questions = [
       answer:
         "In addition to the purchase price, there are other costs such as closing fees, property taxes, and inspection fees. Our agents can give you a detailed breakdown of all costs involved in buying your home.",
     },
-    {
-      question: "Do you offer property management services?",
-      answer:
-        "Yes, we offer comprehensive property management services for landlords. From tenant screening to rent collection and maintenance, we take care of all the details so you don’t have to.",
-    },
-    {
-      question: "How do I get started with selling or buying a property?",
-      answer:
-        "The first step is to contact one of our real estate agents. They will guide you through the process, whether you’re looking to sell, buy, or rent. We are here to help you every step of the way!",
-    },
+    // {
+    //   question: "Do you offer property management services?",
+    //   answer:
+    //     "Yes, we offer comprehensive property management services for landlords. From tenant screening to rent collection and maintenance, we take care of all the details so you don’t have to.",
+    // },
+    // {
+    //   question: "How do I get started with selling or buying a property?",
+    //   answer:
+    //     "The first step is to contact one of our real estate agents. They will guide you through the process, whether you’re looking to sell, buy, or rent. We are here to help you every step of the way!",
+    // },
   ];
   

@@ -2,7 +2,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   
     .question-header {
       display: flex;
@@ -18,18 +18,21 @@
       }
   
       .question-icon {
-        button {
-          background: none;
-          border: none;
-          font-size: 1.25rem;
-          cursor: pointer;
-  
-          svg {
-            color: #666;
-          }
-  
-          &:hover svg {
-            color: #000;
+        li{
+          list-style-type: none;
+          button {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+    
+            svg {
+              color: #666;
+            }
+    
+            &:hover svg {
+              color: #000;
+            }
           }
         }
       }
