@@ -3,8 +3,8 @@ import 'dotenv/config';
 
 const io = new Server({
   cors: {
-    origin: "http://localhost:5555",
-    // origin: "https://jojo-estate-client.onrender.com",
+    origin: process.env.CLIENT_URL,
+   
   },
 });
 
