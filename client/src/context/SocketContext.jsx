@@ -9,8 +9,9 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(   
-     io("https://jojo-estate-socket.onrender.com"));
+    setSocket(
+      io("http://localhost:4444"));
+      // io("https://jojo-estate-socket.onrender.com"));
   }, []);
 
   useEffect(() => {
